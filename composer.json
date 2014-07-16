@@ -1,0 +1,29 @@
+{
+    "name": "freya/framework",
+    "description": "Core behaviors for Freya PHP",
+    "keywords": ["framework","freya","php"],
+    "homepage": "http://freya.alexpriebe.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alex Priebe",
+            "email": "hi@alexpriebe.com",
+            "homepage": "http://www.alexpriebe.com/"
+        }
+    ],
+    "require": {
+        "Pimple/Pimple": "~2.1",
+        "Patchwork/UTF8": "~1.1",
+        "monolog/monolog": "~1.10",
+        "filp/whoops": "1.1.*"
+    },
+    "suggest": {
+        "ext-mcrypt": "Required for HTTP cookie encryption"
+    },
+    "autoload": {
+        "psr-0": { "Freya\\": "Freya/" }
+    },
+	"config": {
+		"preferred-install": "dist"
+	}
+}
