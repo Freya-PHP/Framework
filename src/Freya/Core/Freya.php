@@ -32,7 +32,7 @@
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
-namespace Freya;
+namespace Freya\Core;
 
 class Freya extends \Freya\Helpers\Container
 {
@@ -102,13 +102,13 @@ class Freya extends \Freya\Helpers\Container
         $whoops->pushHandler($jsonHandler);
 
         // Setup Monolog, for example:
-        $logger = new \Monolog\Logger('logger');
-        $logger->pushHandler(new Monolog\Handler\StreamHandler("/my/exception.log"));
+        //$logger = new \Monolog\Logger('logger');
+        //$logger->pushHandler(new Monolog\Handler\StreamHandler("/my/exception.log"));
 
         // Place our custom handler in front of the others, capturing exceptions
         // and logging them, then passing the exception on to the other handlers:
         $whoops->pushHandler(function ($exception, $inspector, $run) use($logger) {
-            $logger->addError($exception->getMessage());
+            //$logger->addError($exception->getMessage());
         });
         
         $whoops->register();
