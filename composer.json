@@ -21,7 +21,9 @@
         "ext-mcrypt": "Required for HTTP cookie encryption"
     },
     "autoload": {
-        "psr-0": { "Freya\\": "Freya/" }
+        "psr-4": {
+            "Freya\\": "Freya/src"
+        }
     },
 	"config": {
 		"preferred-install": "dist"
